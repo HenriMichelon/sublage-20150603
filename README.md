@@ -3,6 +3,15 @@
 Archive of the complete toolchain for the experimental, stack-based programming langage Sublage
 
 ```
+import console
+
+run <<
+    "Hello, World !" println
+>>
+```
+
+
+```
 import thread
 import mutex
 import console
@@ -51,5 +60,95 @@ run <<
         1 - dup 0 >
     >> drop
     "run exiting" println
+>>
+```
+
+```
+import console
+
+class inter extends upperclass <<
+    
+    oncreate <<
+        "inter constructor" println
+    >>
+
+    f3 <<
+        super .f3
+        "inter f3" println
+     >>
+>>
+
+class upperclass <<
+    var v1 read write
+    
+    oncreate <<
+        "Upper constructor" println
+        "upper ivar v1" self ->.v1
+    >>
+
+    f1 <<
+        "upper f1" println
+    >>
+
+    (f2) <<
+        "upper f2" println
+    >>
+
+    f3 <<
+        "upper f3" println
+    >>
+
+    print <<
+        "upper v1: " self .v1 + println
+    >>
+>>
+
+
+class maclasse extends inter <<
+
+    var v2 write setv2 read getv2 
+
+    var v3 read
+    var v4 write 
+
+    oncreate <<
+        "Constructor" println
+        "ivar v2" self ->.v2
+        "ivar v3" self ->.v3
+        "ivar v4" self ->.v4
+    >>
+
+    print <<
+        "v1 : " self .v1 + println
+        "v2 : " self .v2 + println
+        "v3 : " self .v3 + println
+        "v4 : " self .v4 + println
+    >>
+
+    ondestroy <<
+        "Destructor" println
+    >>
+
+    (getv2) <<
+        self .v2
+    >>
+
+    (setv2) <<
+        self ->.v2
+    >>
+
+    f1 <<
+       super .f1
+        "F1" println
+        self .f2
+    >>
+
+    (f2) <<
+        "F2" println
+        self .f3
+        "toto" self ->.v1
+        self .print
+    >>
+
 >>
 ```
