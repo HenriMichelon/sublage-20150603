@@ -2,7 +2,7 @@
 
 Archive of the complete toolchain for the experimental, stack-based programming langage Sublage
 
-`
+```
 import thread
 import mutex
 import console
@@ -52,4 +52,4 @@ run <<
     >> drop
     "run exiting" println
 >>
-`
+```
