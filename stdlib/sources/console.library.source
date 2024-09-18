@@ -1,0 +1,10 @@
+native print
+native new_line
+native read_line
+native read_char
+native flush
+
+println <<
+    print
+    new_line
+>>

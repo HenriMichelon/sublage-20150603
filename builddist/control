@@ -1,0 +1,11 @@
+Package: sublage
+Version: 0
+Section: devel
+Priority: extra
+Architecture: amd64
+Maintainer: Henri Michelon 
+Description: Sublage stack based programming langage
+ This package contains a compiler, a virtual machine 
+ and a standard library for the Sublage stack based
+ programming langage.
+ Homepage: http://xxx.xxx/

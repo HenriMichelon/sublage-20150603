@@ -1,0 +1,24 @@
+<!DOCTYPE fontscolors PUBLIC 
+    '-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN' 
+    'http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd'>
+<fontscolors>
+     <fontcolor name="unknown" default="error"/>
+     <fontcolor name="decimal" default="literal" foreColor="920000"/>
+     <fontcolor name="internal" default="identifier">
+         <font style="italic"/>
+     </fontcolor>
+     <fontcolor name="reservedword" default="keyword"/>
+     <fontcolor name="identifier" default="identifier" />
+     <fontcolor name="startfunc" default="operator" foreColor="gray"/>
+     <fontcolor name="endfunc" default="operator" foreColor="gray"/>
+     <fontcolor name="string" default="string"/>
+     <fontcolor name="ref" default="identifier"/>
+     <fontcolor name="varset" default="operator"/>
+     <fontcolor name="startarray" default="operator" />
+     <fontcolor name="endarray" default="operator"/>
+     <fontcolor name="onelinecomment" default="comment">
+         <font style="italic"/>
+     </fontcolor>
+     <fontcolor name="space" default="whitespace"/>
+     <fontcolor name="separator" default="separator"/>
+</fontscolors>

@@ -1,0 +1,7 @@
+native get
+native set
+native count
+native remove_first
+native remove_last
+native insert
+native clone

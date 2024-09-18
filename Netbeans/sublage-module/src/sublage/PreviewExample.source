@@ -1,0 +1,10 @@
+# sublage preview example
+import console
+
+var var1
+
+run <<
+    "Hello, World !" println
+    [ 1 "2" @run ] drop
+    123 456.0 0x798 + - ->var1
+>>

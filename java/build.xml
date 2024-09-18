@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+
+<project name="Sublage" default="dist" basedir=".">
+    
+    <target name="init">
+        <mkdir dir="build"/>
+    </target>
+    
+    <target name="dist" depends="compile">
+        <mkdir dir="dist"/>
+        <jar destfile="dist/sublage-lexer.jar"
+             basedir="build"
+             includes="sublage/lexer/** sublage/lang/**">
+            <manifest>
+                <attribute name="Implementation-Title" value="Sublage lexer"/>
+                <attribute name="Implementation-Version" value="r1"/>
+            </manifest>
+        </jar>
+        <jar destfile="dist/sublage-ant.jar"
+             basedir="build"
+             includes="sublage/ant/** sublage/lexer/** sublage/lang/**">
+            <manifest>
+                <attribute name="Implementation-Title" value="Sublage Ant custom task"/>
+                <attribute name="Implementation-Version" value="r1"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac debug="true" srcdir="src" destdir="build">
+            <classpath>
+                <path path="lib/ant.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="run-ant" depends="compile">  
+        <java classname="sublage.AntCompile">
+            <classpath>
+                <pathelement path="build"/>
+                <path path="lib/ant.jar"/>
+            </classpath>
+        </java>
+    </target>
+    
+    <target name="run-lexer" depends="compile">  
+        <java classname="sublage.LexerDumpTokens">
+            <arg value="../stdlib/appserver.library.source"/>
+            <arg value="../Netbeans/sublage_module/src/info/sublage/SublageTemplate.source"/>
+            <classpath>
+                <pathelement path="build"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="clean">
+        <delete dir="build"/>
+        <delete dir="dist"/>
+    </target>
+    
+    <target name="run" depends="compile">
+        <taskdef name="sublagec" classname="sublage.ant.CompileTask" classpath="build"/>
+        <taskdef name="sublage" classname="sublage.ant.ExecuteTask" classpath="build"/>
+        <mkdir dir="binaries"/>
+        <sublagec sublagec="/Users/z/Documents/my/Documents/dev/sublage/sublage/sublagec" 
+                  stdlib="/Users/z/Documents/my/Documents/dev/sublage/sublage/stdlib"
+                  debug="on"
+                  destdir="binaries"/>
+        <sublage  sublage="/Users/z/Documents/my/Documents/dev/sublage/sublage/sublage" 
+                  stdlib="/Users/z/Documents/my/Documents/dev/sublage/sublage/stdlib"
+                  binariespath="binaries"
+                  stackdump="stack.txt"
+                  debugger="socket"
+                  binary="main.binary"/>
+    </target>
+
+</project>

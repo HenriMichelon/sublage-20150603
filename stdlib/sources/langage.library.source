@@ -1,0 +1,25 @@
+native getclass
+native getclassname
+
+class sublageobject <<
+    
+    instanceclass <<
+        self getclass
+    >>
+
+    instanceid <<
+        self getclass
+    >>
+
+    tostring <<
+        self getclassname
+    >>
+    
+>>
+
+
+class sublageclass <<
+    name <<
+        self getclassname
+    >>
+>>

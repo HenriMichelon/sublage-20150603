@@ -1,0 +1,14 @@
+native length
+native index_of
+native substring
+native starts_with
+native ends_with
+
+native char_at
+native contains
+native is_empty
+native last_index_of
+native replace
+#native split
+#native trim
+

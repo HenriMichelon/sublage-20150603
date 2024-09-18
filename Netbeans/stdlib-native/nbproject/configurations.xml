@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="90">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="../../stdlib/src" name="0">
+      <in>array.library.c</in>
+      <in>console.library.c</in>
+      <in>io.library.c</in>
+      <in>math.library.c</in>
+      <in>mutex.library.c</in>
+      <in>socket.library.c</in>
+      <in>string.library.c</in>
+      <in>thread.library.c</in>
+      <in>utils.c</in>
+      <in>utils.h</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>../../stdlib/src/Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>../../stdlib/src</Elem>
+  </sourceRootList>
+  <projectmakefile>../../stdlib/src/Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>../../stdlib/src</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <incDir>
+              <pElem>../../sublage/include</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>__PIC__=2</Elem>
+              <Elem>__pic__=2</Elem>
+            </preprocessorList>
+          </cTool>
+        </makeTool>
+        <requiredProjects>
+          <makeArtifact PL="../../sublage"
+                        CT="0"
+                        CN="Default"
+                        AC="true"
+                        BL="false"
+                        WD="../../sublage"
+                        BC="${MAKE} -f Makefile"
+                        CC="${MAKE} -f Makefile clean"
+                        OP="">
+          </makeArtifact>
+        </requiredProjects>
+      </makefileType>
+      <item path="../../stdlib/src/array.library.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../stdlib/src/console.library.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../stdlib/src/io.library.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../stdlib/src/math.library.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../stdlib/src/mutex.library.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../stdlib/src/socket.library.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../stdlib/src/string.library.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../stdlib/src/thread.library.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../stdlib/src/utils.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../../stdlib/src/utils.h" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

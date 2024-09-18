@@ -1,0 +1,20 @@
+import console
+import io
+import string
+
+run <<
+    "io.library.c" "r" openfile
+    io:readline
+    while <<
+        dup isnotnull
+    >> do <<
+        println
+        io:readline
+    >>
+    drop close
+    
+    "thefile.txt" "w" openfile
+    "Hello, text File !" io:println
+    "Last line" io:println
+    close
+>>

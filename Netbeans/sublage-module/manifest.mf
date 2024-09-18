@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+OpenIDE-Module: sublage/1
+OpenIDE-Module-Layer: sublage/layer.xml
+OpenIDE-Module-Localizing-Bundle: sublage/Bundle.properties
+OpenIDE-Module-Requires: org.openide.windows.IOProvider
+OpenIDE-Module-Specification-Version: 1.0
+

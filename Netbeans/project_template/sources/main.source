@@ -1,0 +1,6 @@
+# sublage default template
+import console
+
+run <<
+    "Hello, World !" println
+>>

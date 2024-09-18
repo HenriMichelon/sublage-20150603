@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="90">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="../../sublage/include" name="0">
+      <df name="sublage">
+        <in>binexec.h</in>
+        <in>binexecimg.h</in>
+        <in>byteorder.h</in>
+        <in>context.h</in>
+        <in>debug.h</in>
+        <in>dump.h</in>
+        <in>dynload.h</in>
+        <in>internals.h</in>
+        <in>internalsIdentifiers.h</in>
+        <in>lexical.h</in>
+        <in>linkedlist.h</in>
+        <in>loader.h</in>
+        <in>mem.h</in>
+        <in>opcode.h</in>
+        <in>reservedwords.h</in>
+        <in>stack.h</in>
+        <in>stackobject.h</in>
+        <in>strbuffer.h</in>
+        <in>thread.h</in>
+        <in>types.h</in>
+        <in>vmcontext.h</in>
+        <in>vmerrors.h</in>
+      </df>
+    </df>
+    <df root="../../sublage/src" name="1">
+      <df name="assembler">
+        <in>binexec.c</in>
+        <in>binexec.h</in>
+        <in>classes.c</in>
+        <in>classes.h</in>
+        <in>dump.c</in>
+        <in>dump.h</in>
+        <in>errors.c</in>
+        <in>errors.h</in>
+        <in>function.c</in>
+        <in>function.h</in>
+        <in>import.c</in>
+        <in>import.h</in>
+        <in>lexical.c</in>
+        <in>reservedwords.c</in>
+        <in>syntax.c</in>
+        <in>syntax.h</in>
+      </df>
+      <df name="common">
+        <in>byteorder.c</in>
+        <in>dynload.c</in>
+        <in>linkedlist.c</in>
+        <in>mem.c</in>
+        <in>stack.c</in>
+        <in>strbuffer.c</in>
+        <in>thread.c</in>
+      </df>
+      <df name="runtime">
+        <df name="internals">
+          <in>internal_add.c</in>
+          <in>internal_and.c</in>
+          <in>internal_div.c</in>
+          <in>internal_eq.c</in>
+          <in>internal_ge.c</in>
+          <in>internal_gt.c</in>
+          <in>internal_le.c</in>
+          <in>internal_lt.c</in>
+          <in>internal_mod.c</in>
+          <in>internal_mul.c</in>
+          <in>internal_neq.c</in>
+          <in>internal_not.c</in>
+          <in>internal_or.c</in>
+          <in>internal_sub.c</in>
+          <in>internals.c</in>
+          <in>internals.h</in>
+          <in>internals_tables.h</in>
+        </df>
+        <in>binexec.c</in>
+        <in>binexecimg.c</in>
+        <in>debug.c</in>
+        <in>dump.c</in>
+        <in>errors.c</in>
+        <in>loader.c</in>
+        <in>vmcontext.c</in>
+      </df>
+      <in>binarydump.c</in>
+      <in>debugdump.c</in>
+      <in>dumptokens.c</in>
+      <in>sublage.c</in>
+      <in>sublagec.c</in>
+      <in>sublaged.c</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>../../sublage/Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>../../sublage/include</Elem>
+    <Elem>../../sublage/src</Elem>
+  </sourceRootList>
+  <projectmakefile>../../sublage/Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+        <buildAnalyzer>false</buildAnalyzer>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>../../sublage</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <standard>3</standard>
+            <incDir>
+              <pElem>../../sublage</pElem>
+              <pElem>../../sublage/include</pElem>
+              <pElem>../../sublage/include/sublage</pElem>
+            </incDir>
+          </cTool>
+        </makeTool>
+      </makefileType>
+      <item path="../../sublage/include/sublage/binexec.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/binexecimg.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/byteorder.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/context.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/debug.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/dump.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/dynload.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/internals.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/internalsIdentifiers.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/lexical.h"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/include/sublage/linkedlist.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/loader.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/mem.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/opcode.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/reservedwords.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/stack.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/stackobject.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/strbuffer.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/thread.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/types.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/vmcontext.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/include/sublage/vmerrors.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/src/assembler/binexec.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/assembler/binexec.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/src/assembler/classes.c"
+            ex="false"
+            tool="0"
+            flavor2="3">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/assembler/classes.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/src/assembler/dump.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/assembler/dump.h" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="../../sublage/src/assembler/errors.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/assembler/errors.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/src/assembler/function.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/assembler/function.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/src/assembler/import.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/assembler/import.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/src/assembler/lexical.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/assembler/reservedwords.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/assembler/syntax.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/assembler/syntax.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/src/binarydump.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+          <preprocessorList>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/common/byteorder.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/common/dynload.c" ex="false" tool="0" flavor2="3">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/common/linkedlist.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/common/mem.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/common/stack.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/common/strbuffer.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/common/thread.c" ex="false" tool="0" flavor2="3">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/debugdump.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+          <preprocessorList>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/dumptokens.c" ex="false" tool="0" flavor2="3">
+        <cTool>
+          <preprocessorList>
+            <Elem>__STDC_VERSION__=199901L</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/binexec.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/binexecimg.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/debug.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/dump.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/errors.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_add.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_and.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_div.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_eq.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_ge.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_gt.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_le.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_lt.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_mod.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_mul.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_neq.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_not.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_or.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internal_sub.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internals.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/internals/internals.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/src/runtime/internals/internals_tables.h"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="../../sublage/src/runtime/loader.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/runtime/vmcontext.c"
+            ex="false"
+            tool="0"
+            flavor2="2">
+        <cTool>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/sublage.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+          <preprocessorList>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/sublagec.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+          <preprocessorList>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="../../sublage/src/sublaged.c" ex="false" tool="0" flavor2="2">
+        <cTool>
+          <preprocessorList>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <folder path="0">
+        <cTool>
+          <preprocessorList>
+            <Elem>__STDC_VERSION__=199901L</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="1/assembler">
+        <cTool>
+          <preprocessorList>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="1/common">
+        <cTool>
+          <preprocessorList>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="1/runtime">
+        <cTool>
+          <preprocessorList>
+            <Elem>__PIC__=2</Elem>
+            <Elem>__pic__=2</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+    </conf>
+  </confs>
+</configurationDescriptor>

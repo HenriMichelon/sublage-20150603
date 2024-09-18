@@ -1,0 +1,132 @@
+import console
+import socket
+import string
+import thread
+import array
+import io
+
+var server_socket
+var handlers
+
+send_headers <<
+    "HTTP/1.0 " 4 roll + over send_line
+    swap foreach <<
+        over 3 + pick send_line
+    >>
+    "Server: appserver.library" over send_line
+    "Connection: close" over send_line
+    "" swap send_line
+>>
+
+process_client <<
+    dup recv
+    # check browser command length
+    dup length 14 < if <<
+        "client send invalid string : " print println
+        close
+        ret
+    >>
+    # we only support GET HTTP command
+    dup 0 3 substring "GET" !=
+    if <<
+        "client send invalid command : " print println
+        close
+        ret
+    >>
+    # extract URL
+    dup "/" index_of -1 substring
+    dup " " index_of 0 swap substring
+    
+    # read headers, and store them in an array
+    []
+    while <<
+        pick3 recv
+        dup "" !=
+    >> do <<
+        +
+    >>
+    drop # last empty line
+    over swap + # add URL at start of array
+
+    swap
+    handlers clone swap drop
+    while <<
+        dup count 0 >
+    >> do <<
+        dup remove_first # url
+        over remove_first # handler ref
+        swap 4 pick =
+        if <<
+            5 pick swap # get socket
+            5 pick swap # get headers and URL
+            exec
+            render_view
+            break
+        >> else << 
+            drop
+        >>
+    >>
+    3 dropn # drop handlers parameters
+    close
+>>
+
+content_type <<
+    dup ".xhtml" ends_with
+    over ".xml" ends_with
+    or if <<
+        "Content-Type: application/xhtml+xml; charset=UTF-8"
+    >> else <<
+        dup ".html" ends_with if <<
+            "Content-Type: text/html; charset=UTF-8"
+        >> else <<
+            dup ".json" ends_with if <<
+                "Content-Type: application/json; charset=UTF-8"
+            >> else <<
+                dup ".jpeg" ends_with
+                over ".jpg" ends_with
+                or if <<
+                    "Content-Type: image/jpeg"
+                >> else <<
+                    "Content-Type: text/plain; charset=UTF-8"
+                >>
+            >>
+        >>
+    >>
+    swap drop
+>>
+
+render_view <<
+    "web/" over + "r" open_file
+    dup isnull if <<
+        drop2 
+        "404 NOTFOUND" [] 3 roll send_headers
+        ret
+    >>
+     "200 OK" roll3 content_type 1 ->[] 4 pick send_headers
+    4096 swap io:read_bytes
+    while <<
+        dup isnotnull
+    >> do <<
+        pick3 send
+        4096 swap io:read_bytes
+    >>
+    drop io:close
+    drop # socket
+>>
+
+onload <<
+    [] ->handlers
+>>
+
+start <<
+    dup socket_server ->server_socket
+    swap handlers + ->handlers
+    "appserver accepting connections on port " print println
+    while << true >> do <<
+        server_socket accept
+        dup isnull if << break >>
+        process_client
+        #@process_client thread:start drop
+    >>
+    server_socket close
+>>

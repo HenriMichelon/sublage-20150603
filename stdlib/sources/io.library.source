@@ -1,0 +1,13 @@
+native open_file
+native close
+native print
+native new_line
+native read_line
+native read_char
+native read_bytes
+native flush
+
+println <<
+    print
+    new_line
+>>

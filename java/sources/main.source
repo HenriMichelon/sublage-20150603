@@ -1,0 +1,9 @@
+# sublage default template
+import mylib import autrelib
+
+var var1
+
+# main entry point
+run <<
+   mylib:myfunc
+>>

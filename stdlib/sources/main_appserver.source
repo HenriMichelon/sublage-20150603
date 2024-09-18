@@ -1,0 +1,19 @@
+import appserver
+
+default <<
+    drop
+    "index.xhtml"
+>>
+
+hello <<
+    drop
+    "hello.jpg"
+>>
+
+run <<
+    [ 
+        "/"         @default
+        "/hello"    @hello
+    ]
+    8888 start 
+>>

@@ -1,0 +1,45 @@
+/*
+    Binary file loader.
+*/
+#pragma once
+
+#include <stdio.h>
+#include "sublage/linkedlist.h"
+#include "sublage/stackobject.h"
+#include "sublage/vmcontext.h"
+
+typedef enum {
+    LOADER_NOERROR,
+    LOADER_ERROR_OPEN,
+    LOADER_ERROR_READ,
+    LOADER_ERROR_READHEADER,
+    LOADER_ERROR_BADMAGIC,
+    LOADER_ERROR_UNSUPPORTEDVERSION,
+    LOADER_ERROR_READCODE,
+    LOADER_ERROR_READIMPORTSTABLEOFFSET,
+    LOADER_ERROR_READIMPORTEDFUNCTIONSTABLEOFFSET,
+    LOADER_ERROR_READNATIVETABLEOFFSET,
+    LOADER_ERROR_READSTRINGSTABLEOFFSET,
+    LOADER_ERROR_READARRAYSTABLEOFFSET,
+    LOADER_ERROR_READCLASSESTABLEOFFSET,
+    LOADER_ERROR_READFUNCTIONSTABLE,
+    LOADER_ERROR_READIMPORTSTABLE,
+    LOADER_ERROR_READIMPORTEDFUNCTIONSTABLE,
+    LOADER_ERROR_READNATIVETABLE,
+    LOADER_ERROR_READSTRINGSSTABLE,
+    LOADER_ERROR_READARRAYSSTABLE,
+    LOADER_ERROR_READCLASSESSSTABLE,
+    LOADER_ERROR_UNKNOWNOPCODE,
+    LOADER_ERROR_LOADDYNAMICLIBRARY,
+} LoaderErrorCode;
+
+BinExecFile* loaderLoadFileFromFileName(char*name);
+BinExecFile* loaderLoadFile(FILE *in, char*name);
+
+LoaderErrorCode loaderGetErrorCode();
+const char* loaderGetErrorMessage();
+char* loaderLoadString(FILE *in);
+
+StackObject* loaderNextStackObject(BinExecFile *bef, uint64_t *index);
+
+

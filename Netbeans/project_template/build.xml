@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="sublageapplication" default="run" basedir=".">
+    
+    <property name="binaries" value="binaries"/>
+    <property name="sources" value="sources"/>
+    <property name="antlib" value="lib/sublage-ant.jar"/>    
+    
+    <!-- The following properties are only used outside NetBeans.
+         You can configure them if you run Ant manually.
+         When using NetBeans, you can configure them in the preferences
+         or in the project properties.
+    -->
+    <property name="main" value="main.binary"/>
+    <property name="debug" value=""/>
+    <property name="debugger" value="socket"/>
+    <property name="debuggerport" value="9876"/>
+    <property name="stackdump" value=""/>
+    <property name="sublagebin" value=""/>
+    <property name="sublagecbin" value=""/>
+    <property name="stdlib" value=""/>
+    
+    <taskdef name="sublage" classname="sublage.ant.ExecuteTask" classpath="${antlib}"/>
+    <taskdef name="sublagec" classname="sublage.ant.CompileTask" classpath="${antlib}"/>
+    
+    <target name="init">
+        <mkdir dir="${binaries}"/>
+    </target>
+    
+    <target name="compile" depends="init">
+        <sublagec destdir="${binaries}" 
+                  sublagec="${sublagecbin}"
+                  debug="${debug}"
+                  stdlib="${stdlib}"/>
+    </target>
+    
+    <target name="run" depends="compile">
+        <sublage binary="${main}"
+                 binariespath="${binaries}"
+                 sublage="${sublagebin}"
+                 stdlib="${stdlib}"
+                 stackdump="${stackdump}"/>
+    </target>
+    
+    <target name="debug" depends="compile">
+        <sublage binary="${main}"
+                 binariespath="${binaries}"
+                 sublage="${sublagebin}"
+                 stdlib="${stdlib}"
+                 debugger="${debugger}"
+                 debuggerport="${debuggerport}"
+                 stackdump="${stackdump}"/>
+    </target>
+    
+    <target name="clean">
+        <delete dir="${binaries}"/>
+    </target>
+    
+</project>

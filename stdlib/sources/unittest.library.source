@@ -1,0 +1,10 @@
+
+var tests_run
+
+onload <<
+    0 ->tests_run
+>>
+
+## 
+assert <<
+>>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="90">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="../../sublage/include" name="0">
+      <df name="sublage">
+        <in>binexec.h</in>
+        <in>binexecimg.h</in>
+        <in>byteorder.h</in>
+        <in>context.h</in>
+        <in>debug.h</in>
+        <in>dump.h</in>
+        <in>dynload.h</in>
+        <in>internals.h</in>
+        <in>internalsIdentifiers.h</in>
+        <in>lexical.h</in>
+        <in>linkedlist.h</in>
+        <in>loader.h</in>
+        <in>mem.h</in>
+        <in>opcode.h</in>
+        <in>reservedwords.h</in>
+        <in>stack.h</in>
+        <in>stackobject.h</in>
+        <in>strbuffer.h</in>
+        <in>thread.h</in>
+        <in>types.h</in>
+        <in>vmcontext.h</in>
+        <in>vmerrors.h</in>
+      </df>
+    </df>
+    <df root="../../sublage/src" name="1">
+      <df name="assembler">
+        <in>binexec.c</in>
+        <in>binexec.h</in>
+        <in>classes.c</in>
+        <in>classes.h</in>
+        <in>dump.c</in>
+        <in>dump.h</in>
+        <in>errors.c</in>
+        <in>errors.h</in>
+        <in>function.c</in>
+        <in>function.h</in>
+        <in>import.c</in>
+        <in>import.h</in>
+        <in>lexical.c</in>
+        <in>reservedwords.c</in>
+        <in>syntax.c</in>
+        <in>syntax.h</in>
+      </df>
+      <df name="common">
+        <in>byteorder.c</in>
+        <in>dynload.c</in>
+        <in>linkedlist.c</in>
+        <in>mem.c</in>
+        <in>stack.c</in>
+        <in>strbuffer.c</in>
+        <in>thread.c</in>
+      </df>
+      <df name="runtime">
+        <df name="internals">
+          <in>internal_add.c</in>
+          <in>internal_and.c</in>
+          <in>internal_div.c</in>
+          <in>internal_eq.c</in>
+          <in>internal_ge.c</in>
+          <in>internal_gt.c</in>
+          <in>internal_le.c</in>
+          <in>internal_lt.c</in>
+          <in>internal_mod.c</in>
+          <in>internal_mul.c</in>
+          <in>internal_neq.c</in>
+          <in>internal_not.c</in>
+          <in>internal_or.c</in>
+          <in>internal_sub.c</in>
+          <in>internals.c</in>
+          <in>internals.h</in>
+          <in>internals_tables.h</in>
+        </df>
+        <in>binexec.c</in>
+        <in>binexecimg.c</in>
+        <in>debug.c</in>
+        <in>dump.c</in>
+        <in>errors.c</in>
+        <in>loader.c</in>
+        <in>vmcontext.c</in>
+      </df>
+      <in>binarydump.c</in>
+      <in>debugdump.c</in>
+      <in>dumptokens.c</in>
+      <in>sublage.c</in>
+      <in>sublagec.c</in>
+      <in>sublaged.c</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>../../sublage/Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>4</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+            <option name="gdb_source_dirs"
+                    value="/Users/z/Documents/my/dev/sublage/sublage/src:/Users/z/Documents/my/dev/sublage/sublage/include:/Users/z/Documents/my/dev/sublage/sublage"/>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>../sublage/sublagec ../../stdlib/sources/maclasse.source</runcommandpicklistitem>
+          <runcommandpicklistitem>../sublage/sublagec ../../stdlib/sources/maclasse.class.source maclasse.class</runcommandpicklistitem>
+          <runcommandpicklistitem>../sublage/sublaged maclasse.class</runcommandpicklistitem>
+          <runcommandpicklistitem>../sublage/sublagec sources/maclasse.class.source maclasse.class</runcommandpicklistitem>
+          <runcommandpicklistitem>../sublage/sublagec -d sources/maclasse.library.source binaries/maclasse.library</runcommandpicklistitem>
+          <runcommandpicklistitem>../sublage/sublagec -d sources/console.source binaries/console.library</runcommandpicklistitem>
+          <runcommandpicklistitem>../sublage/sublagec -d sources/console.library.source binaries/console.library</runcommandpicklistitem>
+          <runcommandpicklistitem>../sublage/sublage -s stdout binaries/main.binary</runcommandpicklistitem>
+          <runcommandpicklistitem>../sublage/sublagec -d sources/main.source binaries/main.binary</runcommandpicklistitem>
+          <runcommandpicklistitem>../sublage/sublagec -d sources/unittest.library.source binaries/unittest.library</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>../sublage/sublagec -d sources/unittest.library.source binaries/unittest.library</runcommand>
+        <rundir>../../stdlib</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+          <variable name="LD_LIBRARY_PATH" value="binaries"/>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

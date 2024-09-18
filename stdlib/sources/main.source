@@ -1,0 +1,32 @@
+import console
+import string
+
+a <<
+    b
+>>
+
+b << 
+    println
+>>
+
+run <<
+    a
+    "Hello, World" println
+    #"myexception1" raise
+    "Impossible" println
+    #dup 4 charat println
+    #dup "World" contains println
+    #dup "Foo" contains println
+    #dup isempty println
+    #"" isempty println
+    #dup "o" lastindexof println
+    #dup "World" "France" replace println
+
+#myexception1:
+#    "myexception1" println
+#    ret
+#myexception2:
+#    "myexception" println
+#exception:
+#    "foo" println
+>>

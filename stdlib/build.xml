@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="stdlib" default="run" basedir=".">
+    
+    <property name="sublage-src" value="../sublage"/>
+    <property name="binaries" value="binaries"/>
+    <property name="sources" value="sources"/>
+    <property name="antlib" value="lib/sublage-ant.jar"/>    
+    
+    <!-- The following properties are only used outside NetBeans.
+         You can configure them if you run Ant manually.
+         When using NetBeans, you can configure them in the preferences
+         or in the project properties.
+    -->
+    <property name="main" value="${binaries}/main.binary"/>
+    <property name="debug" value="on"/>
+    <property name="debugger" value="stdin"/>
+    <property name="debuggerport" value="9876"/>
+    <property name="stackdump" value=""/>
+    <property name="sublagebin" value="${sublage-src}/sublage"/>
+    <property name="sublagecbin" value="${sublage-src}/sublagec"/>
+    <property name="stdlib" value="${binaries}"/>
+    
+    <taskdef name="sublage" classname="sublage.ant.ExecuteTask" classpath="${antlib}"/>
+    <taskdef name="sublagec" classname="sublage.ant.CompileTask" classpath="${antlib}"/>
+    
+    <target name="init">
+        <mkdir dir="${binaries}"/>
+    </target>
+    
+    <target name="compile" depends="init">
+        <!--<exec executable="make" failonerror="true" dir="src"/>-->
+        <sublagec destdir="${binaries}" 
+                  sublagec="${sublagecbin}"
+                  debug="${debug}"
+                  stdlib="${stdlib}"/>
+    </target>
+    
+    <target name="run" depends="compile">
+        <sublage binary="${main}"
+                 binariespath="${binaries}"
+                 sublage="${sublagebin}"
+                 stdlib="${stdlib}"
+                 stackdump="${stackdump}"/>
+    </target>
+    
+    <target name="debug" depends="compile">
+        <sublage binary="${main}"
+                 binariespath="${binaries}"
+                 sublage="${sublagebin}"
+                 stdlib="${stdlib}"
+                 debugger="${debugger}"
+                 debuggerport="${debuggerport}"
+                 stackdump="${stackdump}"/>
+    </target>
+    
+    <target name="clean">
+        <delete dir="${binaries}"/>
+        <!--<exec executable="make" failonerror="true" dir="src">
+            <arg value="clean"/>
+        </exec>-->
+    </target>
+    
+</project>
