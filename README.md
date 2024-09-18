@@ -1,6 +1,6 @@
 # Sublage 2015
 
-Archive of the complete toolchain for the experimental, stack-based programming langage Sublage
+Archive of the complete toolchain (compiler, runtime VM, debugger) for the experimental, stack-based programming langage Sublage
 
 ```
 import console
